@@ -16,6 +16,7 @@
         android:text="Hello World!" />
 
     <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
+        android:id="@+id/map_wrapper"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:padding="8dp">

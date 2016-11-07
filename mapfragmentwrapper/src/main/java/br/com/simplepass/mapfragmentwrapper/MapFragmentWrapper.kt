@@ -1,9 +1,14 @@
 package br.com.simplepass.mapfragmentwrapper
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.annotation.TargetApi
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -13,6 +18,8 @@ import android.widget.RelativeLayout
  */
 class MapFragmentWrapper : RelativeLayout {
 
+    var mMarkImageView : ImageView? = null
+    var mShadowView : View? = null
 
     constructor(context: Context) : super(context) {
         init(context)
@@ -32,14 +39,54 @@ class MapFragmentWrapper : RelativeLayout {
     }
 
     private fun init(context: Context) {
-        val markImage = ImageView(context)
 
         val params = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT)
         params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 
-        markImage.setImageResource(R.mipmap.ic_launcher)
+        mMarkImageView = ImageView(context)
+        mMarkImageView?.setImageResource(R.drawable.ic_marker_centered)
 
-        addView(markImage, params)
+        mShadowView = View(context)
+        mShadowView?.setBackgroundResource(R.drawable.map_pin_shadow)
+
+        addView(mMarkImageView, params)
+        addView(mShadowView, params)
     }
+
+    fun animateUp() {
+        if(mMarkImageView != null && mShadowView != null) {
+            val translateY = ObjectAnimator.ofInt(mMarkImageView,
+                    "translationY",
+                    (mMarkImageView!!.height.div(10)))
+
+            val alphaShadow = ObjectAnimator.ofFloat(mShadowView,
+                    "alpha",
+                    1f,
+                    0.6f)
+
+            val animatorSet = AnimatorSet()
+            animatorSet.playTogether(translateY, alphaShadow)
+            animatorSet.start()
+        }
+    }
+
+    fun animateDown(){
+        if(mMarkImageView != null && mShadowView != null) {
+            val translateYInverse = ObjectAnimator.ofInt(mMarkImageView,
+                    "translationY",
+                    mMarkImageView!!.height.div(25))
+
+            val alphaShadowInverse = ObjectAnimator.ofFloat(mShadowView,
+                    "alpha",
+                    0.6f,
+                    1f)
+
+            val animatorSet = AnimatorSet()
+            animatorSet.playTogether(translateYInverse, alphaShadowInverse)
+            animatorSet.start()
+        }
+    }
+
+
 }
