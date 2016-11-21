@@ -56,9 +56,11 @@ class MapFragmentWrapper : RelativeLayout {
 
     fun animateUp() {
         if(mMarkImageView != null && mShadowView != null) {
-            val translateY = ObjectAnimator.ofInt(mMarkImageView,
+            val aux = mMarkImageView!!.height
+
+            val translateY = ObjectAnimator.ofFloat(mMarkImageView,
                     "translationY",
-                    (mMarkImageView!!.height.div(10)))
+                    -(mMarkImageView!!.height.toFloat())/10)
 
             val alphaShadow = ObjectAnimator.ofFloat(mShadowView,
                     "alpha",
@@ -73,9 +75,9 @@ class MapFragmentWrapper : RelativeLayout {
 
     fun animateDown(){
         if(mMarkImageView != null && mShadowView != null) {
-            val translateYInverse = ObjectAnimator.ofInt(mMarkImageView,
+            val translateYInverse = ObjectAnimator.ofFloat(mMarkImageView,
                     "translationY",
-                    mMarkImageView!!.height.div(25))
+                    mMarkImageView!!.height.toFloat()/25)
 
             val alphaShadowInverse = ObjectAnimator.ofFloat(mShadowView,
                     "alpha",
@@ -88,5 +90,13 @@ class MapFragmentWrapper : RelativeLayout {
         }
     }
 
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        when (ev.action) {
+            MotionEvent.ACTION_DOWN -> animateUp()
+            MotionEvent.ACTION_UP -> animateDown()
+        }
+
+        return true
+    }
 
 }

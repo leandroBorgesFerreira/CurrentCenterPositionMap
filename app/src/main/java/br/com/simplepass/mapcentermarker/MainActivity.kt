@@ -13,10 +13,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val handler = Handler()
-
-        handler.postDelayed({map_wrapper.animateUp()}, 2000)
-        handler.postDelayed({map_wrapper.animateDown()}, 4000)
-
     }
 }
