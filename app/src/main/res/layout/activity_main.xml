@@ -11,16 +11,10 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
-        android:id="@+id/map_wrapper"
+    <fragment
+        android:id="@+id/main_fragment_map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        class="br.com.simplepass.mapfragmentwrapper.CustomMapFragment"/>
 
-        <fragment
-            android:id="@+id/main_fragment_map"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.google.android.gms.maps.MapFragment"/>
-
-    </br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper>
 </LinearLayout>

@@ -16,8 +16,15 @@ import android.widget.RelativeLayout
  */
 class MapFragmentWrapper : RelativeLayout {
 
-    var mMarkImageView : ImageView? = null
-    var mShadowView : View? = null
+    interface OnDragListener {
+        fun onDragStart(motionEvent: MotionEvent)
+        fun onDragEnd(motionEvent: MotionEvent)
+    }
+
+    var mOnDragListener: OnDragListener? = null
+
+    private var mMarkImageView : ImageView? = null
+    private var mShadowView : View? = null
     lateinit var params : RelativeLayout.LayoutParams
 
     constructor(context: Context) : super(context) {
@@ -43,7 +50,7 @@ class MapFragmentWrapper : RelativeLayout {
         removeView(mMarkImageView)
         removeView(mShadowView)
         addView(mMarkImageView, -1 , params)
-        addView(mShadowView, -1, params) 
+        addView(mShadowView, -1, params)
     }
 
     private fun init(context: Context) {
@@ -94,12 +101,16 @@ class MapFragmentWrapper : RelativeLayout {
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-        when (ev.action) {
-            MotionEvent.ACTION_DOWN -> animateUp()
-            MotionEvent.ACTION_UP -> animateDown()
+        when (ev.getAction()) {
+            MotionEvent.ACTION_DOWN -> mOnDragListener?.onDragStart(ev)
+            MotionEvent.ACTION_UP -> mOnDragListener?.onDragEnd(ev)
         }
 
-        return true
+        return super.dispatchTouchEvent(ev)
+    }
+
+    fun setOnDragListener(mOnDragListener: OnDragListener) {
+        this.mOnDragListener = mOnDragListener
     }
 
 }
