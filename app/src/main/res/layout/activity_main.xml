@@ -5,16 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="br.com.simplepass.mapcentermarker.MainActivity">
-
-    <TextView
+    
+    <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/main_fragment_map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="br.com.simplepass.mapfragmentwrapper.CustomMapFragment"/>
+        <fragment
+            android:id="@+id/main_fragment_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper>
 
 </LinearLayout>

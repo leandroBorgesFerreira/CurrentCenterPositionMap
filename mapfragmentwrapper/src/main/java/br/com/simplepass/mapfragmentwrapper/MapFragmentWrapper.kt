@@ -102,8 +102,8 @@ class MapFragmentWrapper : RelativeLayout {
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         when (ev.getAction()) {
-            MotionEvent.ACTION_DOWN -> mOnDragListener?.onDragStart(ev)
-            MotionEvent.ACTION_UP -> mOnDragListener?.onDragEnd(ev)
+            MotionEvent.ACTION_DOWN -> animateUp()
+            MotionEvent.ACTION_UP -> animateDown()
         }
 
         return super.dispatchTouchEvent(ev)

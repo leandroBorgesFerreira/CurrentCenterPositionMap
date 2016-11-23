@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 ext {
     PUBLISH_GROUP_ID='br.com.simplepass'
     PUBLISH_ARTIFACT_ID='current-center-position-map'
-    PUBLISH_VERSION='0.1.0'
+    PUBLISH_VERSION='0.8.0'
 }
 
 android {
