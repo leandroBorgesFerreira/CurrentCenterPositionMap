@@ -1,6 +1,12 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+ext {
+    PUBLISH_GROUP_ID='br.com.simplepass'
+    PUBLISH_ARTIFACT_ID='current-center-position-map'
+    PUBLISH_VERSION='0.1.0'
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "24.0.1"
@@ -31,3 +37,5 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

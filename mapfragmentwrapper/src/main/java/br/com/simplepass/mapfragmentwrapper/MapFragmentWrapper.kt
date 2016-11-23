@@ -5,8 +5,6 @@ import android.animation.ObjectAnimator
 import android.annotation.TargetApi
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +18,7 @@ class MapFragmentWrapper : RelativeLayout {
 
     var mMarkImageView : ImageView? = null
     var mShadowView : View? = null
+    lateinit var params : RelativeLayout.LayoutParams
 
     constructor(context: Context) : super(context) {
         init(context)
@@ -38,26 +37,30 @@ class MapFragmentWrapper : RelativeLayout {
         init(context)
     }
 
+    override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
+        super.onLayout(changed, l, t, r, b)
+
+        removeView(mMarkImageView)
+        removeView(mShadowView)
+        addView(mMarkImageView, -1 , params)
+        addView(mShadowView, -1, params) 
+    }
+
     private fun init(context: Context) {
-
-        val params = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT)
-        params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-
         mMarkImageView = ImageView(context)
         mMarkImageView?.setImageResource(R.drawable.ic_marker_centered)
+
+        params = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT)
+        params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 
         mShadowView = View(context)
         mShadowView?.setBackgroundResource(R.drawable.map_pin_shadow)
 
-        addView(mMarkImageView, params)
-        addView(mShadowView, params)
     }
 
     fun animateUp() {
         if(mMarkImageView != null && mShadowView != null) {
-            val aux = mMarkImageView!!.height
-
             val translateY = ObjectAnimator.ofFloat(mMarkImageView,
                     "translationY",
                     -(mMarkImageView!!.height.toFloat())/10)
