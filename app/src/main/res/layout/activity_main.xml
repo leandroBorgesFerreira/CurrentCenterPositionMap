@@ -5,8 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="br.com.simplepass.mapcentermarker.MainActivity">
-    
+
     <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
+        android:id="@+id/map_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

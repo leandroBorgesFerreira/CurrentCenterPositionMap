@@ -2,6 +2,8 @@ package br.com.simplepass.mapcentermarker
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 
@@ -29,6 +31,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mapFragment.getMapAsync(this)
 
+        map_wrapper.setOnDragListener(object : MapFragmentWrapper.OnDragListener{
+            override fun onDragStart() {
+
+            }
+
+            override fun onDragEnd() {
+                Log.d("Wrapper", "Drag end!")
+            }
+        })
 
     }
 
