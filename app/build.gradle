@@ -26,7 +26,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.google.android.gms:play-services-maps:9.4.0'
-    compile project(':mapfragmentwrapper')
+    //compile project(':mapfragmentwrapper')
+    compile 'br.com.simplepass:current-center-position-map:0.8.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 repositories {
