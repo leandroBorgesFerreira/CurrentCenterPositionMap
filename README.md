@@ -23,7 +23,7 @@
     compile 'br.com.simplepass:current-center-position-map:0.8.0'
     
 ## Bugs and Feedback
-For bugs, feature requests, and discussion please use [GitHub Issues](https://github.com/leandroBorgesFerreira/LoadingButtonAndroid/issues).
+For bugs, feature requests, and discussion please use [GitHub Issues](https://github.com/leandroBorgesFerreira/CurrentCenterPositionMap/issues).
 
 ##License
 
