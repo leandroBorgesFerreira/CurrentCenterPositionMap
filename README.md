@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/lehen01/maven/CurrentCenterPositionMap/images/download.svg) ](https://bintray.com/lehen01/maven/CurrentCenterPositionMap/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/lehen01/maven/MapWrapperChoosePlace/images/download.svg) ](https://bintray.com/lehen01/maven/MapWrapperChoosePlace/_latestVersion)
 
 ## CurrentCenterPosition
 ![enter image description here](https://lh3.googleusercontent.com/-QcdxY1QGEtY/WDbbYeYQUxI/AAAAAAAAKtQ/fQG7c6jyg2IiIxxvvqsIi-HQWUxcywwbQCLcB/s400/nov-24-2016+10-19-40.gif "nov-24-2016 10-19-40.gif")
@@ -20,7 +20,7 @@
 
 ##Install
 
-    compile 'br.com.simplepass:current-center-position-map:0.8.0'
+    compile 'br.com.simplepass:mapfragmentwrapper:0.8.0'
     
 ## Bugs and Feedback
 For bugs, feature requests, and discussion please use [GitHub Issues](https://github.com/leandroBorgesFerreira/CurrentCenterPositionMap/issues).

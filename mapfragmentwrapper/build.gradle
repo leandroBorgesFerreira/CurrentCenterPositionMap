@@ -1,20 +1,21 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.jfrog.bintray'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'CurrentCenterPositionMap'
+    bintrayName = 'MapWrapperChoosePlace'
 
-    publishedGroupId = 'renatamelo@patriauto.org'
-    libraryName = 'CurrentCenterPositionMap'
-    artifact = 'current-center-position-map'
+    publishedGroupId = 'br.com.simplepass'
+    libraryName = 'MapFragmentWrapper'
+    artifact = 'mapfragmentwrapper'
 
     libraryDescription = 'A library to mark the center of a map with moveing animations'
 
     siteUrl = 'https://github.com/leandroBorgesFerreira/CurrentCenterPositionMap'
     gitUrl = 'https://github.com/leandroBorgesFerreira/CurrentCenterPositionMap.git'
 
-    libraryVersion = '0.8.1'
+    libraryVersion = '0.8.0'
 
     developerId = 'leandroBorgesFerreira'
     developerName = 'Leandro Borges Ferreira'
