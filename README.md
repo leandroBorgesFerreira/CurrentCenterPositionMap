@@ -1,6 +1,8 @@
 [ ![Download](https://api.bintray.com/packages/lehen01/maven/MapWrapperChoosePlace/images/download.svg) ](https://bintray.com/lehen01/maven/MapWrapperChoosePlace/_latestVersion)
 
 ## CurrentCenterPosition
+This is a wrapper for an animation of a position selection pin. Just include de MapFragment inside the xml and it will do the rest. =]
+
 ![enter image description here](https://lh3.googleusercontent.com/-QcdxY1QGEtY/WDbbYeYQUxI/AAAAAAAAKtQ/fQG7c6jyg2IiIxxvvqsIi-HQWUxcywwbQCLcB/s400/nov-24-2016+10-19-40.gif "nov-24-2016 10-19-40.gif")
 
 ##Usage
@@ -17,6 +19,8 @@
             class="com.google.android.gms.maps.SupportMapFragment"/>
 
     </br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper>
+
+That's it! Easy right?
 
 ##Install
 
