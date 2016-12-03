@@ -3,7 +3,8 @@
 ## CurrentCenterPosition
 This is a wrapper for an animation of a position selection pin. Just include de MapFragment inside the xml and it will do the rest. =]
 
-![enter image description here](https://lh3.googleusercontent.com/-Nuh7cj-9bts/WENMftCdwrI/AAAAAAAAK2s/Ru_uLP2Jf9o8anZT3zDiaE3bxVXROrGYQCLcB/s400/mapcenger.gif "mapcenger.gif")
+![enter image description here](https://lh3.googleusercontent.com/-FJMsVGkDnFM/WENNR_PZ99I/AAAAAAAAK24/0HvNT5KqS74PLlLTe2VO91GVvz7sgpe8ACLcB/s400/map2.gif "map2.gif")
+
 ##Usage
 
      <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
