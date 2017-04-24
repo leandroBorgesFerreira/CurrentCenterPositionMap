@@ -1,9 +1,11 @@
+
+
 [ ![Download](https://api.bintray.com/packages/lehen01/maven/MapWrapperChoosePlace/images/download.svg) ](https://bintray.com/lehen01/maven/MapWrapperChoosePlace/_latestVersion)
 
 ## CurrentCenterPosition
 This is a wrapper for an animation of a position selection pin. Just include de MapFragment inside the xml and it will do the rest. =]
 
-![enter image description here](https://lh3.googleusercontent.com/-FJMsVGkDnFM/WENNR_PZ99I/AAAAAAAAK24/0HvNT5KqS74PLlLTe2VO91GVvz7sgpe8ACLcB/s400/map2.gif "map2.gif")
+![enter image description here](https://i.stack.imgur.com/ZpIJ3.gif "map2.gif")
 
 ##Usage
 
@@ -41,3 +43,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+> Written with [StackEdit](https://stackedit.io/).
