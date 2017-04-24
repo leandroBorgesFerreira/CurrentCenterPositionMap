@@ -7,7 +7,7 @@ This is a wrapper for an animation of a position selection pin. Just include de 
 
 ![enter image description here](https://i.stack.imgur.com/ZpIJ3.gif "map2.gif")
 
-##Usage
+## Usage
 
      <br.com.simplepass.mapfragmentwrapper.MapFragmentWrapper
         android:id="@+id/map_wrapper"
@@ -24,14 +24,14 @@ This is a wrapper for an animation of a position selection pin. Just include de 
 
 That's it! Easy right?
 
-##Install
+## Install
 
     compile 'br.com.simplepass:mapfragmentwrapper:0.8.0'
     
 ## Bugs and Feedback
 For bugs, feature requests, and discussion please use [GitHub Issues](https://github.com/leandroBorgesFerreira/CurrentCenterPositionMap/issues).
 
-##License
+## License
 
 The MIT License (MIT)
 
