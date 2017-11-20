@@ -3,7 +3,7 @@
 [ ![Download](https://api.bintray.com/packages/lehen01/maven/MapWrapperChoosePlace/images/download.svg) ](https://bintray.com/lehen01/maven/MapWrapperChoosePlace/_latestVersion)
 
 ## CurrentCenterPosition
-This is a wrapper for an animation of a position selection pin. Just include de MapFragment inside the xml and it will do the rest. =]
+This is a wrapper for an animation of a position selection pin. Just include the `MapFragment` inside the XML and it will do the rest. =]
 
 ![enter image description here](https://i.stack.imgur.com/ZpIJ3.gif "map2.gif")
 
