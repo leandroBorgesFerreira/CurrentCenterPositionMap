@@ -11,9 +11,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 
-/**
- * Created by hinovamobile on 04/11/16.
- */
 class MapFragmentWrapper : RelativeLayout {
 
     interface OnDragListener {
